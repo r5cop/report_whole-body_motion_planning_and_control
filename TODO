@@ -1,0 +1,29 @@
+Files to edit/adjust:
+
+00-defines.tex
+	enter the deliverable number in the topmost command definition
+	
+01-titlepage.tex
+	fill content table with according data
+	
+02-history.tex
+	adjust history
+	
+03-acronyms.tex
+	fill in acronyms, if required -- if not, comment out include in main.tex
+	
+041-summary.tex
+	document summary
+	
+042-purpose.tex
+	document purpose description
+	
+043-partners.tex
+	list partners contributing to this deliverable
+	
+05-mainmatter.tex
+	adjust to your needs, place eventual \inputs of further content here
+	
+pics/
+	you may want to put your pictures here -- PDF/vectorized preferred, but PNG or JPG are ok as well
+	

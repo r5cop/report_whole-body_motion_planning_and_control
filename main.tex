@@ -1,0 +1,53 @@
+\documentclass[a4paper,11pt]{article}
+
+% ---------------------------------------------------------------------
+% standard includes
+% ---------------------------------------------------------------------
+\input{999-includes}
+\input{999-helpers}
+
+% ---------------------------------------------------------------------
+% fp7-specific definitions
+% ---------------------------------------------------------------------
+\include{00-defines}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\sloppy
+
+% make it look as ugly as the DOC style
+\renewcommand\contentsname{Table of Contents}
+\setcounter{secnumdepth}{5}
+
+
+% ---------------------------------------------------------------------
+% title page and history
+% adjust these to your needs
+% ---------------------------------------------------------------------
+\include{01-titlepage}
+\include{02-history}
+
+% ---------------------------------------------------------------------
+% navigation (static, don't change)
+% ---------------------------------------------------------------------
+\tableofcontents
+\addcontentsline{toc}{section}{Table of Contents}
+
+\clearpage
+\listoffigures
+\addcontentsline{toc}{section}{List of Figures}
+
+\clearpage
+\listoftables
+\addcontentsline{toc}{section}{List of Tables}
+
+% ---------------------------------------------------------------------
+% content
+% adjust these to your needs
+% ---------------------------------------------------------------------
+\include{03-acronyms}
+\include{04-intro}
+\include{05-mainmatter}
+
+\end{document}

@@ -1,0 +1,48 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% change only this line, e.g. to 91.3 for D91.3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\THEDELIV}{ab.cd}
+
+\pagestyle{fancy}
+
+%
+% header content definitions
+%
+\lhead{ARTEMIS-2013}
+\chead{Project Deliverable}
+\rhead{R5-COP}
+
+\lfoot{}
+\cfoot{Deliverable D\THEDELIV: Page \thepage\ of \pageref{LastPage}}
+\rfoot{}
+
+%
+% header formatting definitions
+%
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\headsep}{25pt}
+
+%
+% toc counter to subparagraph
+%
+\setcounter{tocdepth}{5}
+
+%
+% format paragraph and subparagraph like sections
+%
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}%
+  {1.5ex \@plus .2ex}%
+  {\normalfont\normalsize\bfseries}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{4}{\z@}%
+  {-3.25ex\@plus -1ex \@minus -.2ex}%
+  {1.5ex \@plus .2ex}%
+  {\normalfont\normalsize\bfseries}}
+\makeatother
+
+%
+% section formatting definitions
+%
+%\renewcommand\thesection{B.\arabic{section}~}

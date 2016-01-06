@@ -1,0 +1,33 @@
+% word is allowed to look ugly, but not LaTeX
+\clubpenalty=10000
+\widowpenalty=10000
+
+% misc stuff (inherited...)
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{1.5ex plus 0.5ex minus 0.5ex}
+\newcommand{\comm}[2]{\bigskip
+                      \begin{tabular}{|p{11cm}|}\hline
+                      \multicolumn{1}{|c|}{{\bf Comment by #1}}\\ \hline
+                      #2\\ \hline
+                      \end{tabular}
+                      \bigskip
+                     }
+
+\usepackage{color}
+\newcommand{\rnotiz}[1]{\marginpar{\textcolor{red}{#1}}}
+\newcommand{\komm}[2]{\rnotiz{\textbf{#1:}\\#2}}
+\newcommand{\todo}[1]{\rnotiz{\textbf{ToDo:}\\#1}}
+
+\definecolor{blk}{rgb}{0,0,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{lgray}{rgb}{0.7,0.7,0.7}
+\newcommand{\bb}{$\!\!\!$\colorbox{blk}{xx}}
+\newcommand{\lb}{$\!\!\!$\colorbox{lgray}{\textcolor{lgray}{xx}}}
+\newcommand{\db}{$\!\!\!$\colorbox{gray}{\textcolor{gray}{xx}}}
+\newcommand{\nb}{~}  
+
+\newlength{\yr}
+\setlength{\yr}{0.20cm}
+
+\setlength{\arrayrulewidth}{1pt}
+

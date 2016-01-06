@@ -1,0 +1,193 @@
+% ---------------------------------------------------------------------
+% remove stuff without removing or commenting out
+% ---------------------------------------------------------------------
+\newcommand{\nix}[1]{}
+
+% ---------------------------------------------------------------------
+% itemize without wide line spacing
+% ---------------------------------------------------------------------
+\newenvironment{itemize*}%
+	{\begin{itemize}%
+		\setlength{\itemsep}{0pt}%
+		\setlength{\parskip}{0pt}}%
+	{\end{itemize}}
+
+% ---------------------------------------------------------------------
+% comment block
+%	\comm{who}{comment}
+% ---------------------------------------------------------------------
+\newcommand{\comm}[2]{
+	\bigskip
+	\begin{framed}\colorbox{red!25}{\bf Comment / Open Issue: #1}\\[1.5ex]
+	{#2}
+	\end{framed}
+%	\begin{framed}\parbox{0.9\textwidth}{\colorbox{red!25}\textbf{Comment by {#1}}}\end{framed}
+%	\begin{framed}\colorbox{gray!25}{#2}\end{framed}
+%	\setlength{\arrayrulewidth}{1pt}
+%	\begin{longtable}{|p{0.96\textwidth}|}\hline
+%	\rowcolor{red!25}
+%	\multicolumn{1}{|c|}{{\bf }}\tabularnewline 
+%	\hline
+%	\rowcolor{gray!25}
+%	#2\tabularnewline 
+%	\hline
+%	\end{longtable}
+	\addcontentsline{toc}{subparagraph}{Comment / Open Issue: #1}
+	\bigskip
+}
+
+% feedback block
+\newcommand{\feed}[1]{
+	\bigskip
+	\textbf{Feedback to address:}\\
+	\begin{framed}#1\end{framed}
+	\bigskip
+}
+
+% ---------------------------------------------------------------------
+% border notes
+% ---------------------------------------------------------------------
+
+% general border note
+\newcommand{\bnote}[1]{\marginpar{\textcolor{red}{#1}}}
+
+% general todo
+\newcommand{\todo}[1]{\bnote{\textbf{Todo:}\\#1}}
+
+% border note by editor
+\newcommand{\enote}[2]{\bnote{\textbf{#1:}\\#2}}
+
+
+% ---------------------------------------------------------------------
+% timing bars
+% ---------------------------------------------------------------------
+\definecolor{blk}{rgb}{0,0,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{lgray}{rgb}{0.7,0.7,0.7}
+
+% black bar
+\newcommand{\bb}{$\!\!\!$\colorbox{blk}{xx}}
+% (dark) grey bar
+\newcommand{\gb}{$\!\!\!$\colorbox{gray}{\textcolor{gray}{xx}}}
+% light grey bar
+\newcommand{\lb}{$\!\!\!$\colorbox{lgray}{\textcolor{lgray}{xx}}}
+% empty bar (white)
+\newcommand{\nb}{~}
+
+
+% ---------------------------------------------------------------------
+% frameboxes for FP7 documents
+% ---------------------------------------------------------------------
+\newcommand{\tnl}{\tabularnewline}
+
+% pdf tables
+\newcommand{\fwp}[1]{
+	\begin{table}[!h]
+	\centering
+%	\includegraphics[width=\textwidth]{wps/#1.pdf}\\
+	\input{wps/#1}
+	\end{table}
+}
+
+% latex tables
+%\newcommand{\fwp}[1]{
+%	\input{wps/#1.tex}
+%}
+
+\newcommand{\fobj}[1]{\begin{framed}\textbf{Objectives}\\[1.5ex]#1\end{framed}}
+\newcommand{\fdesc}[1]{\begin{framed}\textbf{Description of work}\\[1.5ex]#1\end{framed}}
+\newcommand{\frole}[1]{\begin{framed}\textbf{Role of partners}\\[1.5ex]#1\end{framed}}
+
+\def\fdell#1{%
+	\textbf{List of related deliverables} %
+	\setlength{\arrayrulewidth}{1pt}%
+	\begin{longtable}{%
+		|>{\raggedright}p{60pt}%
+		|>{\raggedright}p{143pt}%
+		|>{\raggedright}p{36pt}%
+		|>{\raggedright}p{24pt}%
+		|>{\raggedright}p{49pt}%
+		|>{\raggedright}p{62pt}%
+		|%
+	} %
+	\hline %
+	\rowcolor{gray!25}
+	\bf Deliverable number %
+	& \bf Deliverable title %
+	& \bf Lead beneficiary % number %
+	& \bf Nat\-ure %
+	& \bf Dis\-sem\-ina\-tion level %
+	& \bf Delivery date\tnl %
+	\hline %
+	\endfirsthead %
+%
+	\multicolumn{6}{l}{\textit{Continued from previous page}}\tnl
+	\hline
+	\rowcolor{gray!25}
+	\bf Deliverable number %
+	& \bf Deliverable title %
+	& \bf Lead beneficiary % number %
+	& \bf Nat\-ure %
+	& \bf Dis\-sem\-ina\-tion level %
+	& \bf Delivery date\tnl %
+	\hline %
+	\endhead %
+%
+	\multicolumn{6}{r}{\textit{Continued on next page}}\tnl
+	\endfoot
+	
+	\endlastfoot
+	#1 
+	\end{longtable}
+}
+
+\def\fdeld#1{%
+	\begin{longtable}{%
+		|>{\raggedright}p{64pt}%
+		|>{\raggedright}p{64pt}%
+		|>{\raggedright}p{285pt}%
+		|%
+	}%
+	\multicolumn{3}{l}{\textbf{Description of Related Deliverables}}\tnl %
+	\hline
+	\rowcolor{gray!25}
+	\bf Deliverable number 
+	& \bf Delivery date 
+	& \bf Description\tnl 
+	\hline 
+	\endfirsthead 
+%
+	\multicolumn{3}{l}{\textit{Continued from previous page}}\tnl
+	\hline
+	\rowcolor{gray!25}
+	\bf Deliverable number 
+	& \bf Delivery date 
+	& \bf Description\tnl 
+	\hline 
+	\endhead 
+%
+	\multicolumn{3}{r}{\textit{Continued on next page}}\tnl
+	\endfoot
+%
+	\endlastfoot
+	#1
+	\end{longtable}
+}
+
+% ---------------------------------------------------------------------
+% participant profiles
+% ---------------------------------------------------------------------
+\newcommand{\porg}[1]{\paragraph{Organisation profile}~\\[-2ex]{#1}}
+\newcommand{\pexp}[1]{\paragraph{Relevant experience}~\\[-2ex]{#1}}
+\newcommand{\prole}[1]{\paragraph{Role in the project}~\\[-2ex]{#1}}
+\newcommand{\pstaff}[1]{\paragraph{Staff members profile}~\\[-2ex]{#1}}
+
+% a nice motivator ...
+\newcommand{\vacant}{%
+\textcolor{red}{\textbf{vacant}}%
+\addcontentsline{toc}{subparagraph}{Vacant Lead}%
+}
+\newcommand{\missing}{%
+\textcolor{red}{\textbf{\Huge missing}}%
+\addcontentsline{toc}{subparagraph}{Missing text}%
+}
