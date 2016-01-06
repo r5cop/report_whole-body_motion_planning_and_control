@@ -1,1 +1,1 @@
-# report_whole-body_motion_planning_and_control
+# R5COP Report Whole-Body Motion Planning and Control
