@@ -94,7 +94,7 @@ A topological map is usually represented in graph form, where the nodes represen
 %A standard graph search algorithm is used to search this graph, resulting in a sequence of sectors (nodes) and gateways (edges) to pass. A metric planner can subsequently be used to plan the trajectories between the gateways.
 
 % Contribution
-The contribution of this chapter is to apply a topological planner for manipulation. The nodes of the topological graph represent the pose of the attractors and also the stiffness and the tolerances. 
+The contribution of this work is to apply a topological planner for manipulation. The nodes of the topological graph represent the pose of the attractors and also the stiffness and the tolerances. 
 %Unlike the aforementioned planners, \emph{not} all nodes constrain the same \dofs. Additionally, the nodes have a semantic label, \eg, pre-grasp, grasp and retract, associated with them.
 Unlike the aforementioned planners, different nodes can constraint different \dofs. Additionally, the nodes have a semantic label, \eg, pre-grasp, grasp and retract, associated with them.
 %In this representation, the nodes represent attractors for the end-effector and the edges represent parts of the motion that also have a semantic label associated with them, such as pre-grasping, grasping and retracting. 
@@ -107,9 +107,9 @@ This approach:
     \item formalizes the various motion stages, offloading the calls to the various motion primitives from the task executer and thereby enhancing re-usability.
 \end{itemize}
 
-This chapter is organized as follows: 
+This report is organized as follows: 
 in Section~\ref{wbp:sec:wbc} whole-body control will be briefly introduced. The topological motion planner will be introduced in Section~\ref{wbp:sec:topological}, including verification of the computed attractors.
-Since the implementation of the planner and controller have not been completed, only a preliminary simulation result is shown in Section~\ref{wbp:sec:simulations}. This chapter ends with the discussion in Section~\ref{wbp:sec:discussion}.
+Since the implementation of the planner and controller have not been completed, only a preliminary simulation result is shown in Section~\ref{wbp:sec:simulations}. This report ends with the discussion in Section~\ref{wbp:sec:discussion}.
 %in Section~\ref{wbp:sec:topological}, the topological motion planner is introduced, including the way the computed motion is validated. Thereafter, simulation results and experimental results are discussed in Sections~\ref{wbp:sec:simulations} and \ref{wbp:sec:experiments}. Finally, conclusions and future work are discussed in Section~\ref{wbp:sec:conclusions}.
 
 \section{Whole-body control}\label{wbp:sec:wbc}
@@ -122,7 +122,7 @@ Since the implementation of the planner and controller have not been completed, 
         \label{wbp:fig:wbc}
     \end{center}
 \end{figure}
-The whole-body controller that is used in this chapter is similar to the approach in~\citet{Dietrich2012}, see Figure~\ref{wbp:fig:wbc}. In this scheme, a Cartesian impedance is present for task execution. As mentioned in the introduction, it basically spans a virtual spring and damper in up to six \dofs\ between the desired and the actual end-effector position, resulting in a wrench $\Wvec$ on that specific link. Using the transpose of the relevant Jacobian matrices $J^T(\qvec)$, joint torques $\tauvec$ are computed using
+The whole-body controller that is used in this work is similar to the approach in~\citet{Dietrich2012}, see Figure~\ref{wbp:fig:wbc}. In this scheme, a Cartesian impedance is present for task execution. As mentioned in the introduction, it basically spans a virtual spring and damper in up to six \dofs\ between the desired and the actual end-effector position, resulting in a wrench $\Wvec$ on that specific link. Using the transpose of the relevant Jacobian matrices $J^T(\qvec)$, joint torques $\tauvec$ are computed using
 \begin{equation}
     \tauvec = J^T\left(\qvec\right)\Wvec,
 \end{equation}
@@ -199,7 +199,7 @@ By appropriately selecting these intermediate points collision-free trajectories
 \end{table}
 %*Should we include head motions as well?*
 
-In this chapter, we propose to formalize these goals in a topological graph. A task executer can then, \eg, ask the motion planner for a `grasp' motion, resulting in three subsequent attractors (adjusting the height, pre-grasping and grasping). 
+In this work, we propose to formalize these goals in a topological graph. A task executer can then, \eg, ask the motion planner for a `grasp' motion, resulting in three subsequent attractors (adjusting the height, pre-grasping and grasping). 
 At this point, the graph only contains nodes for pick-and-place actions but more nodes can be added as the robot is supposed to perform more complicated manipulation tasks. A rule of thumb when adding nodes is that a collision-free trajectory is often possible if the robot always retracts its end-effector to close to its body before proceeding to the next task. The definition of the attractors, \ie, grounding the nodes, is discussed in the next section.
 
 \subsection{Attractors}\label{wbp:ssec:constraints}
@@ -316,7 +316,7 @@ In this simulation, AMIGO is performing a typical grasping move. As a comparison
 %	\item Currently: position control. Possible extension to force control. 
 %	\item Learning
 %\end{enumerate}
-This chapter demonstrates the use of a topological graph for motion planning for manipulation. Although the implementation of the entire pipeline has not yet been finished, preliminary simulations show promising results. 
+This work demonstrates the use of a topological graph for motion planning for manipulation. Although the implementation of the entire pipeline has not yet been finished, preliminary simulations show promising results. 
 A first prerequisite to see the benefits of this planner in practice is to have a decent implementation of the whole-body controller. This allows to make a proper comparison between a geometric planner and a topological planner to assess whether the decreased number of constrained \dofs\ indeed leads to improved performance.
 The graph in Figure~\ref{wbp:fig:graph} and Table~\ref{wbp:tab:motions} only contain nodes for simple pick-and-place operations. 
 %To make this approach more useful, more nodes should be added to the graph so that more tasks are covered. 
@@ -330,13 +330,18 @@ Consider, for example, the task of placing an object. The `place' move, can then
 \newpage
 \section{Appendix A. How to integrate?}
 
-This appendix shows where the whole-body controller and planner are positioned within the TU/e Robotics architecture, depicted in Figure~\ref{app:architecture}. The whole body controller is positioned in the 'Robot skills Implementation' block. The input of the whole body controller is the world model that describes the environment around the robot; as an output, the whole-body controller sends joint references to the low level control or the simulator.
-\begin{figure}[ht]
+This appendix shows where the whole-body controller and planner are positioned within the TU/e Robotics architecture, depicted in Figure~\ref{app:architecture}. The whole body controller is positioned in the 'Robot skills Implementation' block. The input of the whole body controller is the world model that describes the environment around the robot. As an output, the whole-body controller sends joint references to the low level control of the actual robot or the simulated robot.
+\begin{figure}[H]
     \centering
     \includegraphics[width = 1.0\linewidth]{pics/architecture.pdf}
     \caption{TU/e Robotics Architecture}
     \label{app:architecture}
 \end{figure}
-The whole-body controller exposes an API using a ROS actionlib to the Robot API layer so that its functionality can be used as a skill. The actionlib interface definition can be found \href{https://github.com/tue-robotics/amigo_whole_body_controller/blob/master/action/ArmTask.action}{here}; the arguments basically consist of a link name, position constraints and orientation constraints.
+The whole-body controller exposes an API using a ROS actionlib to the Robot API layer so that its functionality can be used as a skill. The actionlib interface definition can be found \href{https://github.com/tue-robotics/amigo_whole_body_controller/blob/master/action/ArmTask.action}{here}; the arguments basically consist of a link name, position constraints and orientation constraints. The output of the whole body controller	are references for the different joints that are taken into account by the controller.
 \\\\
-The output of the whole body controller	are references for the different joints that are taken into account by the controller.
+Integration of this software component requires the following ROS interfaces:
+\begin{itemize}
+	\item A ROS Simple Action Client that provides an objective to the whole body motion controller. An example python script can be found \href{https://github.com/tue-robotics/amigo_whole_body_controller/blob/5d8482e3111d55bb1d6b5f6e4708e6a8f5dce03a/scripts/cartesionmotionobjective.py}{[here]}.
+	\item A low level control component that publishes \href{http://docs.ros.org/api/sensor_msgs/html/msg/JointState.html}{\textit{sensor\_msgs/JointState}} state messages for the joints and a transformation for the base.
+	\item A low level control component that accepts a \href{http://docs.ros.org/api/geometry_msgs/html/msg/Twist.html}{\textit{geometry\_msgs/Twist}} reference message for the robot base and \href{http://docs.ros.org/api/sensor_msgs/html/msg/JointState.html}{\textit{sensor\_msgs/JointState}} reference messages (position or force) for the joints.
+\end{itemize}
