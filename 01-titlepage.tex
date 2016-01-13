@@ -36,18 +36,8 @@ Contributors
 Keywords
 	& Whole-body, motion, control, planning, collision avoidance, topological, maps\\
 Abstract &
-	Whole-body control is a promising control method for domestic service robots. However, since
-whole-body control is a potential field-based method, it only operates at a local scope and it
-might therefore be unable to find a global solution in a complex environment with local minima.
-Therefore, to integrate a whole-body controller with a task executer, a planner is required that
-provides connectivity information at a global scope while constraining only the DoFs that are
-relevant for the (sub-task) at hand. The contribution of this work is to apply a topological
-planner for manipulation, where the topological graph is an abstract representation of possible
-robot configurations that describes possible sequences of motions. All nodes in the topological
-graph are grounded to specific end-effector attractors. Each attractor can constrain up to six
-DoFs and possesses a number of properties, such as the target pose, target offset, stiffness and
-goal tolerances. The feasibility of the motion is subsequently validated by forward integration
-of the closed-loop whole-body controller.\\
+	The promosing whole-body control method only operates at a local scope and therefore suffers of local minima.
+Therefore, a planner is required that provides connectivity information at a global scope while constraining only the DoFs that are relevant for the task at hand. This work presents a topological planner for manipulation, where the topological graph is an abstract representation of possible robot configurations that describes possible sequences of motions.
 \hline
 \end{tabular}
 \vfill\eject
