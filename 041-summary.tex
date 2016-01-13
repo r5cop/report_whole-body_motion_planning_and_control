@@ -1,0 +1,38 @@
+Whole-body control is a promising control method for domestic service robots. However, since whole-body control is a potential field-based method, it only operates at a local scope and it might therefore be unable to find a global solution in a complex environment with local minima. Therefore, to integrate a whole-body controller with a task executer, a planner is required that
+provides connectivity information at a global scope while constraining only the DoFs that are relevant for the (sub-task) at hand.
+The contribution of this chapter is to apply a topological planner for manipulation, where the topological graph is an abstract representation of possible robot configurations that describes possible sequences of motions.
+All nodes in the topological graph are grounded to specific end-effector attractors. Each attractor can constrain up to six DoFs and possesses a number of properties, such as the target pose, target offset, stiffness and goal tolerances. The feasibility of the motion is subsequently validated by forward integration of the closed-loop whole-body controller.
+
+\subsubsection{Results}
+
+\paragraph{Reports}
+\begin{longtable}{|p{8.5cm}p{4cm}p{2cm}|}
+\hline
+\rowcolor[gray]{0.8} \bf Title / URL & \bf Author & \bf Year \\
+\hline
+\href{http://repository.tue.nl/762360}{Reactive collision avoidance for domestic service robots} & Metsemakers, P.M.G. & 2013 \\
+\href{http://repository.tue.nl/778410}{Global path planning for the reactive whole-body controller} & Derksen, T.J.J. & 2014 \\
+\href{http://repository.tue.nl/794842}{Context-aware design and motion planning for autonomous service robots} & Lunenburg, J.J.M. & 2015 \\
+\hline
+\end{longtable}
+
+\paragraph{Software}
+\begin{longtable}{|p{6cm}p{9cm}|}
+\hline
+\rowcolor[gray]{0.8} \bf Package / URL & \bf Description\\
+\hline
+\href{https://github.com/tue-robotics/amigo_whole_body_controller}{tue-robotics/whole\_body\_controller} & Whole-Body Controller ROS Package \\
+\href{https://github.com/tue-robotics/whole_body_planner}{tue-robotics/whole\_body\_planner} & Whole-Body Cartesian planning utility ROS Package \\
+\hline
+\end{longtable}
+
+\paragraph{Videos}
+\begin{longtable}{|p{6cm}p{9cm}|}
+\hline
+\rowcolor[gray]{0.8} \bf Video / URL & \bf Description\\
+\hline
+\href{https://www.youtube.com/watch?v=Fc9SOGC_sMA}{youtube/reactive\_collision\_avoidance} & Reactive collision avoidance with the AMIGO robot \\
+\href{https://www.youtube.com/watch?v=Fc9SOGC_sMA}{youtube/whole\_body\_planning} & Whole-Body motion planning with the AMIGO robot\\
+\hline
+\end{longtable}
+

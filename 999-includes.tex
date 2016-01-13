@@ -40,7 +40,6 @@
 % graphics
 % ---------------------------------------------------------------------
 \usepackage{epsfig,graphicx}			% graphics inclusion
-\usepackage{subfigure}					% side-by-side figures and tables
 \usepackage{float}						% for H style floating
 \usepackage{floatflt}					% for real floating
 \usepackage{wrapfig}					% even better floating
@@ -72,3 +71,79 @@
 % ---------------------------------------------------------------------
 %\usepackage{bibunits}
 %\usepackage{smallbib}
+
+% *** BIBLIOGRAPHY PACKAGES ***
+\usepackage{natbib} 
+\bibliographystyle{spbasic}
+
+% Conferences
+\newcommand{\phumanoids}{Proceedings of the {IEEE-RAS} International Conference on Humanoid Robots}
+\newcommand{\icar}{International Conference on Advanced Robotics}
+\newcommand{\icaim}{{IEEE/ASME} International Conference on Advanced Intelligent Mechatronics}
+\newcommand{\icaps}{International Conference on Automated Planning and Scheduling}
+\newcommand{\icra}{{IEEE} International Conference on Robotics and Automation}
+\newcommand{\picra}{Proceedings of the {IEEE} International Conference on Robotics and Automation}
+\newcommand{\icrb}{{IEEE} International Conference on Robotics and Biomimetics}
+\newcommand{\iros}{{IEEE/RSJ} International Conference on Intelligent Robots and Systems}
+\newcommand{\piros}{Proceedings of the {IEEE/RSJ} International Conference on Intelligent Robots and Systems}
+
+% Journals
+\newcommand{\adro}{Advanced Robotics }
+\newcommand{\auro}{Autonomous Robots }
+\newcommand{\hci}{International Conference on Human-Computer Interaction }
+\newcommand{\ijrr}{International Journal of Robotics Research }
+\newcommand{\jacm}{Journal of the Association for Computing Machinery }
+\newcommand{\jfr}{Journal of Field Robotics }
+\newcommand{\jirs}{Journal of Intelligent \& Robotic Systems }
+\newcommand{\ram}{{IEEE} Robotics \& Automation Magazine }
+\newcommand{\ras}{Robotics and Autonomous Systems }
+\newcommand{\transau}{{IEEE} Transactions on Automation Science and Engineering }
+\newcommand{\transro}{{IEEE} Transactions on Robotics }
+\newcommand{\transroau}{{IEEE} Transactions on Robotics and Automation }
+
+\usepackage{booktabs}
+
+% *** SUBFIGURE PACKAGES ***
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+
+%% Abbreviations
+\newcommand{\apriori}{\emph{a priori}}				% A priori
+\newcommand{\cm}{\ \mathrm{cm}}						% Centimeter
+\newcommand{\cmin}{c_{\mathrm{min}}}				% Minimum cost
+\newcommand{\crec}{c^{\mathrm{rec}}}				% Recovery costs
+\newcommand{\cog}{CoG}								% Center of Gravity
+\newcommand{\dof}{DoF}								% Degree of Freedom
+\newcommand{\dofs}{DoFs}							% Degrees of Freedom
+\newcommand{\ndof}[1]{#1-DoF}						% N-degrees of freedom
+\newcommand{\eg}{\emph{e.g.}}						% Exemplum gratia
+\newcommand{\evec}{\mathbf{e}}						% Error vector
+\newcommand{\goal}{\mathcal{G}}						% Goal area
+\newcommand{\goallc}{\mathcal{G}_{\mathrm{lc}}}		% Subset of goal area with costs below threshold cmin
+\newcommand{\goalhc}{\mathcal{G}_{\mathrm{hc}}}		% Subset of goal area with costs above threshold cmin
+\newcommand{\ie}{\emph{i.e.}}						% Id est
+\newcommand{\ja}{J_\mathrm{a}}						% Alignment costs
+\newcommand{\jg}{J_\mathrm{g}}						% Goal costs
+\newcommand{\jp}{J_\mathrm{p}}						% Path costs
+\newcommand{\jv}{J_\mathrm{v}}						% Velocity costs
+\newcommand{\lrf}{LRF}								% Laser Range Finder
+\newcommand{\lrfs}{LRFs}							% Laser Range Finders
+\newcommand{\mps}{\ \mathrm{m/s}}					% Meter per second
+\newcommand{\rad}{\ \mathrm{rad}}					% Radians
+\newcommand{\rads}{\ \mathrm{rad}/s}     			% Radians per second
+\newcommand{\rinfl}{r_{\mathrm{infl}}}				% Inflation radius
+\newcommand{\rgbd}{RGB-D}							% Red Green Blue Depth
+\newcommand{\rms}{\mathrm{RMS}}						% Root Mean Square
+\newcommand{\tcp}{TCP}								% Tool center point
+\newcommand{\vmax}{v_{\mathrm{max}}}				% Maximum velocity
+\newcommand{\vvec}{\mathbf{v}}						% Velocity vector
+
+% Armplanning
+\newcommand{\Dadd}{D_{\mathbf{a}}}  				% Damping matrix admittance control
+\newcommand{\m}{\ \mathrm{m}}						% Meter
+\newcommand{\Madd}{M_{\mathbf{a}}}  				% Mass matrix admittance control
+\newcommand{\qvec}{\mathbf{q}}						% Vector with joint positions
+\newcommand{\tauvec}{\mathbf{\tau}}					% Torque vector
+\newcommand{\Wvec}{\mathbf{W}}						% Wrench

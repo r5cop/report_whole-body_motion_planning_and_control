@@ -1,0 +1,79 @@
+%% Creator: Inkscape 0.48.2, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'wbcdiagram_new.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{472.8bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.34771574)%
+    \put(0,0){\includegraphics[width=\unitlength]{pics/wbcdiagram_new.pdf}}%
+    \put(0.92470389,0.17007245){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Position
+}}}%
+    \put(0.92301184,0.14469174){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Control}}}%
+    \put(0.7284264,0.18699292){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Admittance}}}%
+    \put(0.7284264,0.16161221){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Coupling}}}%
+    \put(0.18697124,0.24621458){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Cartesian Impedance}}}%
+    \put(0.18697124,0.19545316){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Collision Avoidance}}}%
+    \put(0.18697124,0.14469174){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Joint Limit Avoidance}}}%
+    \put(0.18697124,0.09393032){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Posture Control}}}%
+    \put(0.821489,0.18699292){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$q_d$}}}%
+    \put(0.62690355,0.18699292){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$\tau_d$}}}%
+    \put(0.37690355,0.24642609){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$J^T$}}}%
+    \put(0.31387479,0.26313505){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$W$}}}%
+    \put(0.46615905,0.01778819){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$q$}}}%
+    \put(0.41539763,0.16161221){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$\tau_{jl}$}}}%
+    \put(0.41539763,0.26313505){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$\tau_{CI}$}}}%
+    \put(0.21235195,0.32235671){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$x_d$}}}%
+    \put(0.92301184,0.19545316){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Joint-Level}}}%
+    \put(0.52538071,0.19545316){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Redundancy}}}%
+    \put(0.52241798,0.17007245){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{resolution}}}%
+    \put(0.59306261,0.06008937){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{Reactive Whole-Body Control}}}%
+    \put(0.37690355,0.19566467){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$J^T$}}}%
+    \put(0.41539763,0.21237363){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$\tau_{CA}$}}}%
+    \put(0.41539763,0.11085079){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$\tau_{pos}$}}}%
+    \put(0.31387479,0.21237363){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{$W$}}}%
+  \end{picture}%
+\endgroup%
