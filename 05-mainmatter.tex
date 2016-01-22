@@ -279,7 +279,7 @@ If the entire sequence of attractors is feasible it is fed to the real robot in 
 %\end{itemize}
 
 \section{Simulation results}\label{wbp:sec:simulations}
-Although the implementation has not yet been finalized, a simulation has been performed to illustrate the approach.
+Simulations have been performed with the AMIGO robot to illustrate the approach.
 %To demonstrate the use of the topological manipulation planner, a number of simulations and experiments has been performed with the AMIGO robot.
 AMIGO is the domestic service robot of the Eindhoven University of Technology. Its base platform has four omniwheels and is hence fully holonomic. It is equipped with two \ndof{7} Philips Experimental Robotic Arms. These have the dimensions of the arms of a large person and are placed on an upper body that can move up and down with a telescopic spine. In its lower position, AMIGO can grasp objects from the floor while in its upper position it has the size of a child and can therefore operate most features in a domestic environment. The kinematic structure of AMIGO is redundant: the two arms and torso have a $2 \times 7 +1 = 15$ \dofs.
 
@@ -316,8 +316,7 @@ In this simulation, AMIGO is performing a typical grasping move. As a comparison
 %	\item Currently: position control. Possible extension to force control. 
 %	\item Learning
 %\end{enumerate}
-This work demonstrates the use of a topological graph for motion planning for manipulation. Although the implementation of the entire pipeline has not yet been finished, preliminary simulations show promising results. 
-A first prerequisite to see the benefits of this planner in practice is to have a decent implementation of the whole-body controller. This allows to make a proper comparison between a geometric planner and a topological planner to assess whether the decreased number of constrained \dofs\ indeed leads to improved performance.
+This work demonstrates the use of a topological graph for motion planning for manipulation. The first experiments show promising results. A first prerequisite to see the benefits of this planner in practice is to have a decent implementation of the whole-body controller. This allows to make a proper comparison between a geometric planner and a topological planner to assess whether the decreased number of constrained \dofs\ indeed leads to improved performance.
 The graph in Figure~\ref{wbp:fig:graph} and Table~\ref{wbp:tab:motions} only contain nodes for simple pick-and-place operations. 
 %To make this approach more useful, more nodes should be added to the graph so that more tasks are covered. 
 To use this approach in practice, more nodes should be added to the graph so that more tasks are covered. 
@@ -327,8 +326,11 @@ As discussed in Section~\ref{wbp:ssec:constraints}, the nodes are grounded using
 Extending the definition of the attractors, \ie, the grounding of the nodes, offers numerous possibilities to improve performance. One of the possible extensions is to include force constraints.
 Consider, for example, the task of placing an object. The `place' move, can then be implemented with the attractor position at the table surface and a force constraint in vertical direction. As a result, the robot will move the object down until it `feels' that it has reached the table. 
 
+Videos that demonstrate the obtained result can be found in section \ref{videos}.
+
 \newpage
 \section{Appendix A. How to integrate?}
+\label{ap:integration}
 
 This appendix shows where the whole-body controller and planner are positioned within the TU/e Robotics architecture, depicted in Figure~\ref{app:architecture}. The whole body controller is positioned in the 'Robot skills Implementation' block. The input of the whole body controller is the world model that describes the environment around the robot. As an output, the whole-body controller sends joint references to the low level control of the actual robot or the simulated robot.
 \begin{figure}[H]
