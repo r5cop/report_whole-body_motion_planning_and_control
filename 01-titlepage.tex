@@ -1,42 +1,125 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% static -- do not change
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\thispagestyle{empty}
-{\noindent\centering\includegraphics[height=4cm]{pics/ecsel-logo}~~~~~~\\[3cm]}
-{\noindent\centering\includegraphics{pics/r5-cop}\\[1cm]}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% static -- do not change
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\thispagestyle{empty}
+%{\noindent\centering\includegraphics[height=4cm]{pics/ecsel-logo}~~~~~~\\[3cm]}
+%{\noindent\centering\includegraphics{pics/r5-cop}\\[1cm]}
+%
+%\begin{tabular}{|p{4.5cm}p{11cm}|}
+%\hline
+%\rowcolor[gray]{0.8}
+%\bf Grant Agreement no.
+%	& \bf 621447\\
+%\rowcolor[gray]{0.8}
+%\bf Project acronym
+%	& \bf R5-COP\\
+%\rowcolor[gray]{0.8}
+%\bf	Project full title
+%	& \bf Reconfigurable ROS-based Resilient Reasoning Robotic Cooperating Systems\\
+%\hline
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% dynamic -- change here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Dissemination level
+%	& CO / PU\\
+%Date of Delivery
+%	& 31-1-2016\\
+%Deliverable Number
+%	& D23.40 \\
+%AL / Task related
+%	& T23.4\\
+%Author
+%	& Appeldoorn, R.P.W. \\
+%Contributors
+%	& Lunenburg, J.J.M., Derksen T.J.J., Metsemakers, P.M.G.\\
+%Keywords
+%	& Whole-body, motion, control, planning, collision avoidance, topological, maps\\
+%Abstract &
+%	The whole-body control method only operates at a local scope and therefore suffers of local minima. Therefore, a planner is required that provides connectivity information at a global scope while constraining only the DoFs that are relevant for the task at hand. This work presents a topological planner for manipulation, where the topological graph is an abstract representation of possible robot configurations that describes possible sequences of motions. \\
+%\hline
 
-\begin{tabular}{|p{4.5cm}p{11cm}|}
-\hline
-\rowcolor[gray]{0.8}
-\bf Grant Agreement no.
-	& \bf 621447\\
-\rowcolor[gray]{0.8}
-\bf Project acronym
-	& \bf R5-COP\\
-\rowcolor[gray]{0.8}
-\bf	Project full title
-	& \bf Reconfigurable ROS-based Resilient Reasoning Robotic Cooperating Systems\\
-\hline
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% static -- do not change
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\thispagestyle{empty}
+%%{\noindent\centering\includegraphics[height=4cm]{pics/ecsel-logo}~~~~~~\\[3cm]}
+%%{\noindent\centering\includegraphics{pics/r5-cop}\\[1cm]}
+%%
+%%\begin{tabular}{|p{4.5cm}p{11cm}|}
+%%\hline
+%%\rowcolor[gray]{0.8}
+%%\bf Grant Agreement no.
+%%	& \bf 621447\\
+%%\rowcolor[gray]{0.8}
+%%\bf Project acronym
+%%	& \bf R5-COP\\
+%%\rowcolor[gray]{0.8}
+%%\bf	Project full title
+%%	& \bf Reconfigurable ROS-based Resilient Reasoning Robotic Cooperating Systems\\
+%%\hline
+
+
+\thispagestyle{empty}
+%\setcounter{section}{-1}
+
+\addcontentsline{toc}{section}{\protect\numberline{}Cover page}%
+%\section*[Titlepage]{~}
+\label{sec:title}
+\vspace{-7ex}
+
+\includegraphics[height=3.2cm]{pics/ecsel-logo}\\[1cm]
+
+\noindent\makebox[\textwidth]{\rule{\textwidth}{2pt}}
+
+{\flushright
+~\\[0cm]
+	{\scalefont{5}\bf R5-COP\\[1cm]}
+
+	{\scalefont{1.5}\bf Reconfigurable ROS-based Resilient Reasoning Robotic Cooperating Systems\\[2.0cm]}
+
+  {\scalefont{2} Whole-body motion planning and control\\[1cm]}
+	{\scalefont{1.5}Appeldoorn R.P.W., Lunenburg, J.J.M., Derksen T.J.J., Metsemakers, P.M.G.\\}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % dynamic -- change here
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Dissemination level
-	& CO / PU\\
-Date of Delivery
-	& 31-1-2016\\
-Deliverable Number
-	& D23.40 \\
-AL / Task related
-	& T23.4\\
-Author
-	& Appeldoorn, R.P.W. \\
-Contributors
-	& Lunenburg, J.J.M., Derksen T.J.J., Metsemakers, P.M.G.\\
-Keywords
-	& Whole-body, motion, control, planning, collision avoidance, topological, maps\\
-Abstract &
-	The whole-body control method only operates at a local scope and therefore suffers of local minima. Therefore, a planner is required that provides connectivity information at a global scope while constraining only the DoFs that are relevant for the task at hand. This work presents a topological planner for manipulation, where the topological graph is an abstract representation of possible robot configurations that describes possible sequences of motions. \\
+\vfill
+
+{\centering\scalefont{1.2}
+\begin{tabular}{|r|c|r|c|}
 \hline
-\end{tabular}
-\vfill\eject
+&&&\\[-1.9ex]
+
+\bf Project 				& R5-COP 		
+& \bf Grant Agreement \# 	& 621447\\
+
+\hline
+&&&\\[-1.9ex]
+
+\bf Deliverable \#			& D\THEDELIV
+& \bf Dissemination Level 	& PU\\
+
+\hline
+&&&\\[-1.9ex]
+
+\bf Contact Person 			& Appeldoorn R.P.W.
+& \bf Organization 			& TU/e\\
+
+\hline
+&&&\\[-1.9ex]
+
+\bf E-Mail 					& r.p.w.appeldoorn@tue.nl
+& \bf Date 					& \number\day.\number\month.\number\year \\
+
+\hline
+
+\end{tabular}\\
+}
+
+\null\vfill
+{\centering~~~~\includegraphics[width=\textwidth]{pics/Logo-R5-COP-long}\\}
+\eject
+%\end{tabular}
+%\vfill\eject

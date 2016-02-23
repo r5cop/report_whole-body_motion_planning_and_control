@@ -4,12 +4,11 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 \usepackage{eurosym}
-%\usepackage[T1]{fontenc}
+\usepackage[T1]{fontenc}
 \usepackage[yyyymmdd,hhmmss]{datetime}
+\usepackage{acronym}
 \renewcommand{\dateseparator}{-}
 \renewcommand{\timeseparator}{:}
-
-\usepackage{acronym}					% Acronyms
 
 % ---------------------------------------------------------------------
 % page and text formatting
@@ -28,8 +27,8 @@
 % urls and in-text linking
 % ---------------------------------------------------------------------
 \usepackage{ae,aecompl}
+\usepackage[hyphens]{url}
 \usepackage{hyperref}
-\usepackage{url}
 
 % ---------------------------------------------------------------------
 % coloring
@@ -42,6 +41,7 @@
 % graphics
 % ---------------------------------------------------------------------
 \usepackage{epsfig,graphicx}			% graphics inclusion
+%\usepackage{subfigure}					% side-by-side figures and tables
 \usepackage{float}						% for H style floating
 \usepackage{floatflt}					% for real floating
 \usepackage{wrapfig}					% even better floating
@@ -73,6 +73,18 @@
 % ---------------------------------------------------------------------
 %\usepackage{bibunits}
 %\usepackage{smallbib}
+\usepackage{enumitem}
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+
+% ---------------------------------------------------------------------
+% tikz
+% ---------------------------------------------------------------------
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{patterns}
+
+\usepackage{scalefnt}
+\usepackage{mathptmx}
 
 % *** BIBLIOGRAPHY PACKAGES ***
 \usepackage{natbib} 
@@ -109,6 +121,8 @@
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{subcaption}
+
+\usepackage{pdfpages}
 
 
 %% Abbreviations
